@@ -1,0 +1,201 @@
+/*
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInLeftHp {
+    0% {
+        opacity: 0;
+        transform: translateX(-12rem);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem) scaleX(0);
+    }
+
+    70% {
+        transform: scaleX(.1);
+    }
+
+    80% {
+        transform: translateX(-1.5rem) scaleX(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveFromCenter {
+    0% {
+        opacity: 0;
+        transform: scaleY(0) scaleX(0);
+    }
+
+
+    40% {
+        opacity: 0.7;
+        transform: scaleY(1.8) scaleX(.01);
+    }
+
+    45% {
+        opacity: 0.7;
+        transform: scaleY(1.9) scaleX(.02);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scaleY(2) scaleX(.03);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1) scaleX(1);
+    }
+}
+
+@keyframes moveFromCenter2 {
+    0% {
+        opacity: 0;
+        transform: scaleY(0) scaleX(0);
+    }
+
+    30% {
+        opacity: 0.8;
+        transform: scaleY(.07) scaleX(.9);
+    }
+
+    80% {
+        opacity: 0.9;
+        transform: scaleY(.08) scaleX(.99);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1) scaleX(1);
+    }
+}
+
+*/
+
+//btn animation
+
+@keyframes moveInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*
+
+//elements animation
+
+@keyframes moveInRightImg1 {
+    0% {
+        opacity: 0;
+        transform: translate(40rem, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveInRightImg2 {
+    0% {
+        opacity: 0;
+        transform: translate(20rem, -20rem) rotate(85deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+@keyframes moveInRightImg3 {
+    0% {
+        opacity: 0;
+        transform: translate(40rem, -40rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveInRightImg4 {
+    0% {
+        opacity: 0;
+        transform: translate(-20rem, -40rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+*/
+
+//slider
+
+@keyframes moveUpSlider {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(-7.5rem);
+    }
+}
+
+//toggler slide
+
+@keyframes togglerOpen {
+    0% {
+        transform: translateX(80%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes togglerClose {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(80%);
+    }
+}

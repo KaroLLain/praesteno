@@ -1,0 +1,96 @@
+.nav {
+    grid-column: full-start / full-end;
+    z-index: 20;
+    padding: 1rem;
+
+    position: fixed;
+    background-color: rgba($color-com-grey, .6);
+}
+
+.nav__list {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: minmax(3rem, 5vw) minmax(max-content, 80vw) repeat(4, minmax(max-content, 1fr)) minmax(3rem, 5vw);
+    column-gap: 2rem;
+    align-items: center;
+
+    &__item--1 {
+        grid-column: 2 / 3;
+        margin-right: auto;
+    }
+
+    &__link--img {
+        padding-top: .5rem;
+        height: 3.8rem;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        font-size: 2rem;
+        color: #fff;
+        padding: 1.5rem;
+        display: block;
+        transition: all .2s;
+    }
+
+    &__link:hover {
+        color: $color-primary-lightest;
+        transform: translateY(-1.2px);
+        text-shadow: 0 10px 20px $color-shadow;
+    }
+
+    &__link:active {
+        color: #fff;
+        transform: translateY(1.2px);
+        text-shadow: 0 5px 10px $color-shadow;
+    }
+
+}
+
+//contrast
+
+.contrast .nav * {
+    @include contrastLink;
+}
+
+.contrast .nav__list__link:hover {
+    @include contrastLinkHover;
+}
+
+//switchedColors
+
+.switchedColors .nav * {
+    @include contrastLink;
+}
+
+.switchedColors .nav__list__link:hover {
+    border-bottom: 1px solid yellow;
+}
+
+//lightBackground
+
+.lightBackground .nav * {
+    @include contrastTransparent;
+}
+
+.lightBackground .nav {
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.lightBackground .nav__list__link:hover {
+    background-color: rgba(202, 199, 199, 0.5);
+    border-radius: 1rem;
+}
+
+.lightBackground .nav__list__item--1 {
+    filter: invert(50%);
+}
+
+//links underline
+
+.linksUnderline .nav__list__link {
+    text-decoration: underline;
+}

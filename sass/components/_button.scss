@@ -1,0 +1,250 @@
+.btn {
+
+    &__btn {
+
+        &,
+        &:link,
+        &:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+
+            border-radius: 3rem;
+            cursor: pointer;
+
+            position: relative;
+
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+
+
+            // @media only screen and(max-width: $bp-mobile) {
+            //     font-size: 2.5rem;
+            // }
+        }
+
+        &:hover {
+            transform: translateY(-.3rem);
+            box-shadow: 0 1rem 2rem $color-shadow;
+
+            &::after {
+                transform: scaleX(1.4) scaleY(1.5);
+                opacity: 0;
+            }
+        }
+
+        &:active {
+            transform: translateY(-.1rem);
+            box-shadow: 0 1rem .5rem $color-shadow;
+        }
+
+        &--white {
+            background-color: $color-primary;
+            font-size: $default-font-size;
+            color: $color-font-primary;
+            padding: 1.5rem 4rem;
+            display: inline-block;
+            border: .2rem solid $color-primary;
+            border-radius: 3rem;
+            transition: all .2s;
+
+            &::after {
+                background-color: inherit;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 3rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .6s;
+        }
+
+        &--animated {
+            animation: moveInButton .8s ease-out .75s;
+            animation-fill-mode: backwards;
+        }
+
+        &--small {
+            background-color: rgba($color-com-grey-2, 1);
+            font-size: $default-font-size;
+            color: $color-font-secondary;
+            padding: 1.5rem 4rem;
+            display: inline-block;
+            border-radius: 3rem;
+            transition: all .2s;
+
+            &::after {
+                background-color: inherit;
+            }
+        }
+
+        &--smallWhite {
+            background-color: $color-com-grey-3;
+            font-size: $font-size-medium;
+            color: $color-font-secondary;
+            border: none;
+            padding: 1rem 3rem;
+            display: inline-block;
+            border-radius: 3rem;
+            transition: all .2s;
+
+            &::after {
+                box-shadow: 0 1rem 2rem rgba($color-shadow, .2);
+            }
+
+            @media only screen and(max-width: $bp-mobile) {
+                font-size: 2.5rem;
+            }
+        }
+
+        &--smallGrey {
+            background-color: $color-grey-primary;
+            font-size: $font-size-medium;
+            color: $color-font-secondary;
+            padding: 1rem 3rem;
+            display: inline-block;
+            border-radius: 3rem;
+            transition: all .2s;
+
+            &::after {
+                box-shadow: 0 1rem 2rem rgba($color-shadow, .2);
+            }
+
+            @media only screen and(max-width: $bp-mobile-l) {
+                font-size: 3rem;
+            }
+        }
+
+        &__tab {
+
+            &,
+            &:link,
+            &:visited {
+                border: none;
+                outline: none;
+                text-decoration: none;
+                cursor: pointer;
+                background-color: transparent;
+                padding: 1.5rem 3rem;
+                position: relative;
+            }
+
+            &:hover {
+                transform: translateY(-.3rem);
+                text-shadow: 0 1rem 2rem rgba($color-shadow, .2);
+
+                &::after {
+                    transform: scaleX(1.4) scaleY(1.5);
+                    opacity: 0;
+                }
+            }
+
+            &:active {
+                transform: translateY(-.1rem);
+            }
+        }
+    }
+}
+
+
+.contrast .btn {
+    &__btn {
+
+        &:hover {
+            @include contrastButtonkHover;
+        }
+
+        &:active {
+            @include contrastLinkSelect;
+        }
+
+        &--white {
+            @include contrastButton;
+            border: none;
+
+            &::after {
+                box-shadow: 0 1rem 2rem rgba(white, .2);
+            }
+        }
+
+        &--small {
+            @include contrastButton;
+            border: 2px solid black;
+
+        }
+
+        &--smallWhite {
+            @include contrastButton;
+            border: 2px solid black;
+
+
+        }
+
+        &--smallGrey {
+            @include contrastButton;
+            border: 2px solid black;
+            font-size: $default-font-size;
+            font-weight: 500;
+        }
+    }
+}
+
+.switchedColors .btn {
+    &__btn {
+        @include contrastLink;
+        border: 2px solid yellow;
+        font-size: $default-font-size;
+        font-weight: 500;
+
+        &:hover {
+            box-shadow: 0 1rem 2rem yellow;
+        }
+
+        &:active {
+            box-shadow: 0 1rem .5rem yellow;
+        }
+
+        &--white {
+            &::after {
+                box-shadow: 0 1rem 2rem rgba(yellow, .2);
+            }
+        }
+    }
+}
+
+.lightBackground .btn {
+    &__btn {
+        @include contrastH1invert;
+        border: 1px solid black;
+        font-size: $default-font-size;
+        font-weight: 500;
+
+        &:hover {
+            box-shadow: 0 1rem 2rem gray;
+        }
+
+        &:active {
+            box-shadow: 0 1rem .5rem gray;
+        }
+
+        &--white {
+            &::after {
+                box-shadow: 0 1rem 2rem rgba(gray, .2);
+            }
+        }
+    }
+}
+
+//links underline
+
+.linksUnderline .btn {
+    &__btn {
+        text-decoration: underline;
+    }
+}

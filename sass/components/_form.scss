@@ -1,0 +1,327 @@
+.form {
+    display: grid;
+    row-gap: 1.2rem;
+    width: 80%;
+    margin-right: auto;
+    align-self: start;
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: 2rem;
+        width: 100%;
+        background-color: rgba($color-grey-primary, .8);
+        border: none;
+        border-bottom: 3px solid transparent;
+        transition: all .3s;
+
+        @media only screen and(max-width: $bp-mobile-l) {
+            font-size: 3rem;
+        }
+
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem $color-shadow;
+            border-bottom: 3px solid $color-primary-lightest;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-com-grey;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-font-secondary;
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+        color: rgba(rgb(248, 248, 248), .6);
+    }
+
+    &__input:placeholder-shown+&__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+
+    &__select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: $color-grey-primary;
+
+        .select__option[value=one] {
+            color: $color-font-secondary;
+        }
+    }
+
+    &__adress {
+        padding-right: 3.5rem;
+        line-height: 3.5rem;
+        font-size: 3rem;
+        font-weight: 400;
+        color: $color-font-tetriary;
+
+        @media only screen and(max-width: $bp-mobile) {
+            font-size: 3.5rem;
+            justify-self: center;
+            text-align: center;
+        }
+    }
+}
+
+.textarea {
+
+    &__content {
+        display: none;
+
+        &--1 {
+            padding: 3.91rem 7rem;
+
+            @media only screen and(max-width: $bp-mobile-l) {
+                padding: 0 0 5rem;
+            }
+        }
+
+        &--active {
+            width: 100%;
+            display: grid;
+            align-self: start;
+
+        }
+    }
+
+
+    &__btn {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        @media only screen and(max-width: $bp-mobile) {
+            align-self: flex-start;
+            gap: 0;
+        }
+    }
+
+    &__message {
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.message__content {
+    display: none;
+
+    &--1 {
+        padding: 3.91rem 5rem;
+    }
+
+    z-index: 1;
+}
+
+.message__content--active {
+    display: grid;
+    row-gap: 1rem;
+
+    height: 100%;
+    width: 100%;
+
+    @media only screen and(max-width: $bp-mobile) {
+        row-gap: 0;
+    }
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+    background-color: #42484d;
+    color: #ffffff;
+    font-size: .9rem;
+    border-radius: 5px;
+    padding-right: 0.6rem;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+    background-color: #42484d;
+}
+
+//#map {
+//    height: 24rem;
+//   width: 50rem;
+//}
+
+textarea {
+    resize: none;
+    padding: 12px 20px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 4px;
+    background-color: rgba($color-grey-primary, .6);
+    font-size: $font-size-medium;
+    font-family: $font-primary;
+    box-shadow: 0 1rem 2rem $color-shadow;
+
+    @media only screen and(max-width: $bp-mobile-l) {
+        padding: 12px 10px;
+        height: 30rem;
+        font-size: 3rem;
+        align-self: center;
+    }
+
+    @media only screen and(max-width: $bp-mobile) {
+        height: 15rem;
+        font-size: 3rem;
+    }
+}
+
+.line {
+    content: "";
+    height: 70%;
+    width: 2px;
+    background-color: currentColor;
+    color: $color-font-tetriary;
+    display: block;
+    align-self: center
+}
+
+
+
+//contrast
+
+.contrast .form {
+    &__input {
+        @include contrastH1;
+
+        &:focus {
+            box-shadow: 0 1rem 2rem white;
+            border-bottom: 3px solid white;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid red;
+        }
+
+        &::-webkit-input-placeholder {
+            color: white;
+        }
+    }
+
+    &__label {
+        color: red;
+    }
+
+    &__adress {
+        color: black;
+    }
+
+
+    &__select {
+        background-color: white;
+        color: black;
+    }
+}
+
+.contrast textarea {
+    @include contrastH1;
+}
+
+//switchedColors
+
+.switchedColors .form {
+    &__input {
+        @include contrastH1;
+        border: 2px solid white;
+
+        &:focus {
+            box-shadow: 0 1rem 2rem white;
+            border-bottom: 3px solid white;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid yellow;
+        }
+
+        &::-webkit-input-placeholder {
+            color: white;
+        }
+    }
+
+    &__label {
+        color: white;
+    }
+
+    &__adress {
+        color: white;
+    }
+
+
+    &__select {
+        background-color: white;
+        color: black;
+    }
+}
+
+.switchedColors textarea {
+    @include contrastH1;
+    border: 2px solid white;
+}
+
+.switchedColors .select__option {
+    background-color: white;
+    color: black;
+}
+
+//lightBackground
+
+.lightBackground .form {
+    color: black;
+
+    &__input {
+        @include contrastH1invert;
+        border: 1px solid black;
+
+        &:focus {
+            box-shadow: 0 1rem 2rem grey;
+            border-bottom: 3px solid black;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid grey;
+        }
+
+        &::-webkit-input-placeholder {
+            color: black;
+        }
+    }
+
+    &__label {
+        color: black;
+    }
+
+
+    &__select {
+        background-color: white;
+        color: black;
+    }
+
+    &__adress {
+        color: inherit;
+    }
+}
+
+.lightBackground textarea {
+    @include contrastH1invert;
+    border: 1px solid black;
+    box-shadow: 0 .5rem 1.5rem $color-perfect-grey;
+}

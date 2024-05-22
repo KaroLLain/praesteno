@@ -1,0 +1,79 @@
+.offer {
+    grid-column: full-start / full-end;
+    // background-image: linear-gradient(153deg,
+    //         $color-com-grey 48.8%,
+    //         $color-com-grey-3 49%);
+    background-color: $color-com-grey;
+    // transform: translateY(7rem);
+    padding: 16rem 4rem 3rem;
+    // margin-bottom: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+
+    @media only screen and(max-width: $bp-largest) {
+        background-image: none;
+        background-color: $color-com-grey-3;
+        padding: 16rem 4rem 15rem;
+    }
+
+    @media only screen and(max-width: $bp-medium) {
+        padding: 10rem 8rem 15rem;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    @media only screen and(max-width: $bp-mobile) {
+        padding: 5rem;
+        flex-direction: column;
+        align-content: center;
+    }
+}
+
+.btn__cadre__transition {
+    position: absolute;
+    align-self: flex-end;
+    transform: translateY(-8rem);
+    background-color: transparent;
+    grid-column: full-start / full-end;
+    justify-self: center;
+
+    @media only screen and(max-width: $bp-largest) {
+        visibility: hidden;
+    }
+
+}
+
+//contrast
+
+.contrast .offer {
+    background-image: none;
+    background-color: black
+}
+
+.contrast .btn__cadre__transition {
+    @include contrastH1;
+}
+
+//switchedColors
+
+.switchedColors .offer {
+    background-image: none;
+    background-color: black
+}
+
+.switchedColors .btn__cadre__transition {
+    @include contrastH1;
+}
+
+//lightBackground
+
+.lightBackground .offer {
+    background-image: none;
+    background-color: white;
+}
+
+.lightBackground .btn__cadre__transition {
+    @include contrastTransparent;
+}

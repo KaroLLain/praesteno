@@ -1,0 +1,59 @@
+.header {
+
+    background-image: url(/img/hero3l.png);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba($color-primary, .3);
+
+    display: grid;
+    grid-column: full-start / full-end;
+    align-items: center;
+    justify-items: center;
+
+    &__text {
+        display: grid;
+        grid-template-columns: max-content;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    @media only screen and(max-width: $bp-large) {
+        row-gap: 10rem;
+    }
+
+    @media only screen and(max-width: $bp-medium) {
+        row-gap: 8rem;
+    }
+
+    @media only screen and(max-width: $bp-mobile) {
+        row-gap: 4rem;
+    }
+}
+
+
+
+//contrast
+
+.contrast .header {
+    @include contrastH1;
+    background-image: none;
+}
+
+//switchedColors
+
+.switchedColors .header {
+    @include contrastH1;
+    background-image: none;
+}
+
+//lightBackground
+
+.lightBackground .header {
+    @include contrastH1invert;
+    background-image: none;
+    border: 1px solid black;
+}

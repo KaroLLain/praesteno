@@ -1,0 +1,274 @@
+.popup {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color-primary-light;
+    z-index: 100;
+    //opacity: 0;
+    //visibility: hidden;
+    transition: all .3s;
+
+
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+
+    &__heading {
+        justify-self: center;
+
+        @media only screen and(max-width: $bp-mobile-l) {
+            font-size: 3rem;
+
+        }
+
+        @media only screen and(max-width: $bp-mobile-l) {
+            font-size: 4rem;
+        }
+
+        @media only screen and(max-width: $bp-mobile) {
+            font-size: 3.3rem;
+        }
+
+        @media only screen and(max-width: $bp-mobile) {
+            padding: 0 5rem;
+            font-style: normal;
+            font-weight: 500;
+            text-transform: uppercase;
+
+        }
+    }
+
+
+
+    &__content {
+        @include positionCenter;
+        position: relative;
+        width: 75vw;
+        background-color: $color-grey-light-1;
+        box-shadow: 0 2rem 4rem $color-shadow;
+        border-radius: 1rem;
+        overflow: hidden;
+        // opacity: 0;
+        // transform: translate(-50%, -50%) scale(0.2);
+        // transition: all .5s .3s;
+
+        display: grid;
+        grid-template-columns: 33.33333333% 66.66666667%;
+
+        @media only screen and(max-width: $bp-medium) {
+            grid-template-columns: 1fr;
+        }
+
+        @media only screen and(max-width: $bp-mobile-l) {
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+
+
+    &__right {
+        padding: 3rem 5rem;
+
+        @media only screen and(max-width: $bp-medium) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: .85;
+            background-color: $color-grey-light-1;
+            display: grid;
+            grid-template-rows: repeat(3, min-content);
+            justify-content: center;
+            align-content: center;
+        }
+    }
+
+    &__img {
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+
+
+
+    }
+
+    &__text {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-font-secondary;
+
+        @media only screen and(max-width: $bp-medium) {
+            padding: 5rem 5rem;
+            font-size: 3em;
+            background-color: $color-grey-light-1;
+            text-align: justify;
+            column-count: 1;
+        }
+
+        @media only screen and(max-width: $bp-mobile-l) {
+            font-size: 3.5rem;
+            padding: 5rem 5rem 0;
+        }
+
+    }
+
+    &__close {
+
+        &:link,
+        &:visited {
+            color: $color-grey-light-2;
+            position: absolute;
+            top: .5rem;
+            right: 2.5rem;
+            font-size: 5rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover {
+            color: $color-grey-dark-1;
+        }
+    }
+
+    &__hidden {
+        display: none;
+    }
+
+    &__btn {
+        justify-self: center;
+
+        @media only screen and(max-width: $bp-medium) {
+            font-size: 2.5rem;
+        }
+
+        @media only screen and(max-width: $bp-mobile-l) {
+            font-size: 3rem;
+        }
+    }
+}
+
+
+//contrast
+
+.contrast .popup {
+    background-image: linear-gradient(90deg,
+            rgba(#4e0404, .8) 70%,
+            black 70%);
+
+    &__content {
+        background-color: black;
+        box-shadow: 2rem 2rem 4rem white;
+    }
+
+    &__right {
+
+        @media only screen and(max-width: $bp-medium) {
+            background-color: black;
+            color: rgb(0, 255, 55);
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        color: rgb(0, 255, 55);
+        column-rule: 1px solid rgb(0, 255, 55);
+
+        @media only screen and(max-width: $bp-medium) {
+            background-color: black;
+            color: rgb(0, 255, 55);
+        }
+    }
+
+    &__close {
+
+        &:link,
+        &:visited {
+            color: rgb(0, 255, 55);
+        }
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+//switchedColors
+
+.switchedColors .popup {
+    background-image: none;
+    background-color: black;
+
+    &__content {
+        background-color: black;
+        border: 2px solid yellow;
+    }
+
+    &__right {
+
+        @media only screen and(max-width: $bp-medium) {
+            background-color: black;
+            color: yellow;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        color: white;
+        column-rule: 1px solid white;
+
+        @media only screen and(max-width: $bp-medium) {
+            background-color: black;
+            color: yellow;
+        }
+    }
+
+    &__close {
+
+        &:link,
+        &:visited {
+            color: yellow;
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+//lightBackground
+
+.lightBackground .popup {
+    background-image: none;
+    background-color: white;
+
+
+    &__content {
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    &__text {
+        font-size: 2rem;
+        color: black;
+        column-rule: 1px solid black;
+    }
+
+    &__close {
+
+        &:link,
+        &:visited {
+            color: black;
+            line-height: 2;
+        }
+
+        &:hover {
+            color: grey;
+        }
+    }
+}

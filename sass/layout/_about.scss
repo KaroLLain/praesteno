@@ -1,0 +1,226 @@
+.about {
+
+    &__pictures {
+        grid-column: full-start / col-end 4;
+        background-color: $color-grey;
+        background-image: url(/img/wall1.jpg);
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+
+        display: grid;
+        // grid-template-rows: repeat(6, minmax(min-content, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(6, 1fr));
+        grid-template-rows: repeat(6, 1fr);
+        align-items: center;
+
+        @media only screen and(max-width: $bp-large) {
+            background-image: none;
+            background-color: transparent;
+            background-position: center;
+            background-size: cover;
+        }
+
+        @media only screen and(max-width: $bp-medium) {
+            background-image: url(/img/boy.png);
+            background-size: cover;
+            background-position: top;
+        }
+
+        @media only screen and(max-width: $bp-mobile) {
+            display: none;
+        }
+
+
+
+    }
+
+    &__img--2 {
+        grid-column: 4 / 6;
+        grid-row: 2 / 6;
+
+        height: 100%;
+        z-index: 8;
+
+        @media only screen and(max-width: $bp-largest) {
+            height: 110%;
+
+        }
+
+        @media only screen and(max-width: $bp-large) {
+            height: 120%;
+            grid-column: 5 / 6;
+        }
+
+        @media only screen and(max-width: $bp-medium) {
+            display: none;
+        }
+
+        @media only screen and(max-width: $bp-mobile) {
+            display: none;
+        }
+
+    }
+
+
+    &__content {
+        background-color: $color-com-grey;
+        padding: 0 20rem 0 10rem;
+
+        display: grid;
+        grid-column: col-start 5 / full-end;
+        row-gap: 2rem;
+        align-content: center;
+        justify-items: start;
+
+        @media only screen and(max-width: $bp-extralarge) {
+            padding: 0 5rem;
+        }
+
+        @media only screen and(max-width: $bp-largest) {
+            padding-top: 7rem;
+            padding-bottom: 0;
+        }
+
+        // @media only screen and(max-width: $bp-medium) {
+        //     padding-left: 0;
+        // }
+
+        @media only screen and(max-width: $bp-mobile) {
+            grid-column: full-start/ full-end;
+            // background-color: $color-com-grey;
+            background-image: linear-gradient(rgba($color-com-grey, .8), rgba($color-com-grey, .8)), url(/img/bernard-hermant-_THpp4Hs8LU-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+            padding: 0 1rem;
+            justify-items: center;
+            text-align: justify;
+            // color: $color-font-primary;
+
+        }
+
+        &--h3 {
+            @media only screen and(max-width: $bp-largest) {
+                font-size: 2.7rem;
+                font-weight: 500;
+            }
+
+            @media only screen and(max-width: $bp-medium) {
+                font-size: 3rem;
+            }
+
+            @media only screen and(max-width: $bp-mobile-s) {
+                padding-top: 5rem;
+            }
+        }
+
+    }
+
+    &__text {
+        font-size: $default-font-size;
+        font-style: italic;
+        margin-bottom: 4rem;
+        animation: moveInRightImg1 1s ease-out;
+
+        @media only screen and(max-width: $bp-large) {
+            font-size: 2.6rem;
+        }
+
+
+        @media only screen and(max-width: $bp-medium) {
+            font-size: 3rem;
+            text-align: justify;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        @media only screen and(max-width: $bp-mobile-l) {
+            font-size: 2.7rem;
+        }
+
+        @media only screen and(max-width: $bp-mobile) {
+            padding: 1rem 8rem 0;
+            font-size: 2.5rem;
+        }
+
+    }
+
+    &__btn {
+        @media only screen and(max-width: $bp-medium) {
+            display: none;
+        }
+
+    }
+
+}
+
+//contrast
+
+.contrast .about__pictures {
+    background-image: linear-gradient(180deg,
+            transparent 60%,
+            black 60%);
+    filter: grayscale(1) contrast(1.8) brightness(1.1);
+}
+
+.contrast .about__text {
+    @include contrastH1;
+}
+
+.contrast .about__content {
+    background-color: black;
+
+    @media only screen and(max-width: 37.8rem) {
+        background-image: none;
+        border: 1px solid rgba($color-com-grey, .6);
+    }
+}
+
+//switchedColors
+
+.switchedColors .about__pictures {
+    background-image: linear-gradient(180deg,
+            transparent 60%,
+            black 60%);
+    filter: grayscale(1) contrast(1.8) brightness(1.1);
+}
+
+.switchedColors .about__text {
+    @include contrastH1;
+}
+
+.switchedColors .about__content {
+    border-bottom: 1px solid black;
+    background-color: black;
+
+    @media only screen and(max-width: 37.8rem) {
+        background-image: none;
+        background-color: black;
+        border-top: 1px solid yellow;
+        border-bottom: 2px solid yellow;
+    }
+}
+
+//lightBackground
+
+.lightBackground .about__pictures {
+    background-image: linear-gradient(180deg,
+            transparent 60%,
+            $color-perfect-grey 60%);
+    filter: grayscale(1) contrast(1.8) brightness(1.1);
+    border-bottom: 1px solid black;
+}
+
+.lightBackground .about__text {
+    @include contrastH1invert;
+}
+
+.lightBackground .about__content {
+    background-color: white;
+    border-bottom: 1px solid black;
+
+    @media only screen and(max-width: 37.8rem) {
+        background-image: none;
+    }
+}

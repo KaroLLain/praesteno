@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @media only screen and(max-width: $bp-largest) {
+        font-size: 50%;
+    }
+
+    @media only screen and(max-width: $bp-large) {
+        font-size: 46%;
+    }
+
+    @media only screen and(max-width: $bp-medium) {
+        font-size: 32%;
+    }
+
+    @media only screen and(max-width: $bp-mobile-l) {
+        font-size: 30%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: $color-com-grey;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 95vh 40vw 95vh min-content 90vh repeat(4, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    @media only screen and(max-width: $bp-largest) {
+        grid-template-rows: 90vh 65vh min-content max-content 50vw repeat(4, min-content);
+    }
+
+    @media only screen and(max-width: $bp-large) {
+        grid-template-rows: 90vh 70vh min-content max-content 60vh repeat(4, min-content);
+    }
+
+    @media only screen and(max-width: $bp-medium) {
+        grid-template-rows: 50vh 50vh min-content min-content 50vh repeat(4, min-content);
+    }
+
+    @media only screen and(max-width: $bp-mobile-l) {
+        grid-template-rows: 50vh 40vh min-content min-content 40vh repeat(4, min-content);
+        grid-template-columns: [full-start] [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] [full-end];
+    }
+
+    @media only screen and(max-width: $bp-mobile) {
+        grid-template-rows: 50vh 35vh min-content min-content 50vh repeat(4, min-content);
+    }
+}
+
+
+.contrast body {
+    @include contrastH1;
+}
+
+.switchedColors body {
+    @include contrastH1;
+}
+
+.lightBackground body {
+    @include contrastH1invert;
+}
+
+
+.basicFont body {
+    font-family: sans-serif;
+    letter-spacing: .15rem;
+}
+
+.lazy-img {
+    filter: blur(20px);
+}
+
+
+// 1700 - cadre 2rows 3col
+// 1400 - offer section czcionka na karcie się rozjeżdża
+// 1200 - about section
+// 900 - header (mniejsza czcionka), kontakt kolumnowo, offer, section również

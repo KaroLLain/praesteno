@@ -1,0 +1,119 @@
+.footer {
+
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    align-items: center;
+
+    padding: 3rem;
+    font-size: 1.4rem;
+
+
+
+    &__logo {
+        width: 17rem;
+        height: auto;
+    }
+
+    &__navigation {
+        justify-self: end;
+
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-flex;
+    }
+
+    &__link {
+        backface-visibility: hidden;
+        padding: .5rem 1rem;
+
+        &:link,
+        &:visited {
+            color: $color-font-secondary;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all .1s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-grey-primary;
+            box-shadow: $color-shadow;
+            transform: scale(1.02);
+        }
+    }
+
+    &__copyright {
+        padding-top: 1rem;
+    }
+}
+
+//contrast
+
+.contrast .footer {
+    @include contrastH2;
+
+    &__link {
+
+        &:link,
+        &:visited {
+            @include contrastLink;
+        }
+
+        &:hover,
+        &:active {
+            @include contrastLinkHover;
+        }
+    }
+}
+
+//switchedColors
+
+.switchedColors .footer {
+    @include contrastH1;
+
+    &__link {
+
+        &:link,
+        &:visited {
+            @include contrastLink;
+        }
+
+        &:hover,
+        &:active {
+            border-bottom: 1px solid yellow;
+        }
+    }
+}
+
+//lightBackground
+
+.lightBackground .footer {
+    @include contrastH1invert;
+
+    &__link {
+
+        &:link,
+        &:visited {
+            @include contrastH1invert;
+        }
+
+        &:hover,
+        &:active {
+            background-color: rgba(172, 172, 172, 0.5);
+            border-radius: 3rem;
+        }
+    }
+}
+
+//links underline
+
+.linksUnderline .footer__link {
+    text-decoration: underline;
+}

@@ -1,0 +1,71 @@
+@mixin positionCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin contrastH1 {
+    background-color: black;
+    color: white;
+}
+
+@mixin contrastH1invert {
+    background-color: white;
+    color: black;
+}
+
+@mixin contrastTransparent {
+    background-color: transparent;
+    color: black;
+}
+
+@mixin contrastH2 {
+    background-color: black;
+    color: rgb(0, 255, 55);
+}
+
+@mixin contrastLink {
+    background-color: black;
+    color: yellow;
+}
+
+@mixin contrastButtonkHover {
+    background-color: yellow;
+    color: black;
+}
+
+@mixin contrastLinkSelect {
+    background-color: black;
+    color: rgb(0, 238, 255);
+}
+
+@mixin contrastLinkHover {
+    background-color: rgb(78, 4, 4);
+    color: rgb(0, 238, 255);
+}
+
+@mixin contrastLinkVisited {
+    background-color: black;
+    color: rgb(0, 238, 255);
+}
+
+@mixin contrastButton {
+    background-color: rgb(0, 255, 55);
+    color: black;
+}
+
+//carousel buttons
+@mixin circle($i) {
+    border-radius: 100%;
+    height: $i;
+    width: $i;
+}

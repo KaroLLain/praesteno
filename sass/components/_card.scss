@@ -1,0 +1,122 @@
+/* End basic CSS override */
+
+.profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    width: 32rem;
+    border-radius: 16px;
+    border: 3.5px solid rgba($color-font-primary, .5);
+    position: relative;
+    text-align: center;
+    color: $color-font-secondary;
+    background-image: linear-gradient(180deg,
+            $color-primary 28%,
+            $color-com-grey 28%);
+
+    @media only screen and(max-width: $bp-mobile) {
+        background-image: linear-gradient(180deg,
+                $color-primary 18%,
+                $color-com-grey 18%);
+        height: 70rem;
+        width: 75vw;
+    }
+
+    &__image {
+        border-radius: 50%;
+        border: 2px solid rgba($color-com-grey-3, .4);
+        overflow: hidden;
+        width: 18rem;
+        height: 18rem;
+        position: relative;
+
+        img {
+            filter: saturate(.6);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+    }
+
+    &__username {
+        font-size: $font-size-big;
+        font-weight: 600;
+        margin-top: 1.5rem;
+
+        @media only screen and(max-width: $bp-mobile) {
+            font-size: 3.2rem;
+            font-weight: 400;
+        }
+    }
+
+    &__user__handle {
+        color: $color-font-primary;
+        font-size: $font-size-medium;
+        font-weight: 600;
+        padding-bottom: .5rem;
+
+        @media only screen and(max-width: $bp-mobile) {
+            font-size: 2.7rem;
+            font-weight: 400;
+        }
+    }
+
+    &__description {
+        font-size: $font-size-medium;
+        text-align: justify;
+        white-space: wrap;
+
+        @media only screen and(max-width: $bp-mobile) {
+            font-size: 3rem;
+            font-weight: 400;
+            padding: 0 1rem;
+        }
+    }
+}
+
+
+
+
+//contrast
+
+.contrast .profile {
+    background-image: none;
+    background-color: rgb(78, 4, 4);
+    border: 1px solid white;
+    color: white;
+
+    &-user-handle {
+        color: inherit;
+    }
+}
+
+
+//switchedColors
+
+.switchedColors .profile {
+    background-image: none;
+    background-color: black;
+    border: 1px solid yellow;
+    color: white;
+
+    &-user-handle {
+        color: inherit;
+    }
+}
+
+
+//lightBackground
+
+.lightBackground .profile {
+    background-image: none;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+
+    &-user-handle {
+        color: inherit;
+    }
+}

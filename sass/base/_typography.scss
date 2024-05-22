@@ -1,0 +1,199 @@
+.heading__primary {
+    display: flex;
+    flex-direction: column;
+    font-family: "Josefin Sans", sans-serif;
+    color: $color-font-primary;
+    text-transform: uppercase;
+    align-self: end;
+    padding-bottom: 12rem;
+
+    @media only screen and(max-width: $bp-mobile-l) {
+        padding-top: 12rem;
+        padding-bottom: 7rem;
+
+    }
+
+
+    &--main {
+        display: flex;
+        font-size: 7rem;
+        font-weight: 200;
+        letter-spacing: 0.8rem;
+
+        @media only screen and(max-width: $bp-large) {
+            font-size: 9rem;
+            font-weight: 300;
+            letter-spacing: 0;
+            padding-top: 9rem;
+        }
+
+        @media only screen and(max-width: $bp-medium) {
+            font-size: 9rem;
+        }
+
+        @media only screen and(max-width: $bp-mobile-l) {
+            font-size: 7rem;
+            font-weight: 400;
+        }
+
+        @media only screen and(max-width: $bp-mobile) {
+            font-size: 5.5rem;
+            font-weight: 400;
+        }
+
+        @media only screen and(max-width: $bp-mobile-s) {
+            font-size: 4.5rem;
+        }
+
+
+        .first-word {
+            letter-spacing: 0;
+            opacity: .6;
+            padding-right: 2rem;
+
+        }
+    }
+
+    &--sub {
+        font-size: 2.2rem;
+        font-weight: 400;
+        font-family: $font-primary;
+        letter-spacing: .4rem;
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        column-gap: 1.5rem;
+        align-items: center;
+
+        @media only screen and(max-width: $bp-large) {
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 0;
+        }
+
+        @media only screen and(max-width: $bp-mobile-l) {
+            padding-bottom: 5rem;
+        }
+
+        @media only screen and(max-width: $bp-mobile) {
+            font-size: 2.7rem;
+            font-weight: 400;
+        }
+
+        @media only screen and(max-width: $bp-mobile-s) {
+            font-size: 2.2rem;
+            font-weight: 500;
+            padding-bottom: 3rem;
+        }
+
+
+
+        //animation: moveFromCenter 3s ease-out;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 1px;
+            background-color: currentColor;
+            display: block;
+        }
+
+    }
+
+}
+
+%heading {
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 4.5rem;
+    color: $color-grey-light-1;
+    line-height: 1;
+}
+
+.heading-1bis {
+    font-family: $font-primary;
+    color: $color-font-tetriary;
+    font-size: 5rem;
+    font-weight: 200;
+    letter-spacing: 0;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 3.5rem;
+    font-style: italic;
+    line-height: 1;
+
+    @media only screen and(max-width: $bp-mobile) {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    &--light {
+        color: $color-grey-light-1;
+    }
+
+    &--dark {
+        color: $color-grey-dark-1;
+    }
+
+}
+
+.heading-3 {
+    @extend %heading;
+    color: $color-com-grey-3;
+    font-size: $default-font-size;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: 1.9rem;
+
+    &--light {
+        color: $color-grey-light-1;
+    }
+
+    &--dark {
+        color: $color-grey-dark-1;
+    }
+}
+
+//contrast
+
+.contrast .heading-3 {
+    @include contrastH1;
+}
+
+.contrast .heading-2 {
+    @include contrastH1;
+}
+
+//switchedColors
+
+.switchedColors .heading-3 {
+    @include contrastH1;
+}
+
+.switchedColors .heading-2 {
+    @include contrastH1;
+}
+
+//lightBackground
+
+.lightBackground .heading-3 {
+    @include contrastH1invert;
+}
+
+.lightBackground .heading-2 {
+    @include contrastH1invert;
+}
+
+.lightBackground .heading__primary {
+    @include contrastH1invert;
+}

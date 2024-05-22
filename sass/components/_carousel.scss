@@ -1,0 +1,96 @@
+.wrapper {
+    max-width: 120rem;
+    // white-space: nowrap;
+    // overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    &__carousel {
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        width: calc(3 * 33.35rem);
+        scroll-behavior: smooth;
+
+        @media only screen and(max-width: $bp-mobile) {
+            width: calc(75vw);
+        }
+
+
+
+
+        &__item {
+            height: 48rem;
+            // object-fit: cover;
+            margin-left: 1.4rem;
+            // width: calc(100% / 3);
+
+            @media only screen and(max-width: $bp-mobile) {
+                height: 70rem;
+            }
+
+            &:first-child {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        height: 4rem;
+        width: 4rem;
+        font-size: $font-size-small;
+        cursor: pointer;
+        text-align: center;
+        line-height: 4rem;
+        background: #fff;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+
+        &:first-child {
+            left: -5.5rem;
+            display: none;
+        }
+
+        &:last-child {
+            right: -5rem;
+        }
+    }
+}
+
+.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.dragging .wrapper__carousel__item {
+    pointer-events: none;
+}
+
+//contrast
+
+.contrast .wrapper__arrow {
+    background: rgb(0, 255, 55);
+    color: black;
+    border: 1px solid black;
+}
+
+
+//switchedColors
+
+.switchedColors .wrapper__arrow {
+    background: black;
+    color: yellow;
+    border: 1px solid yellow;
+}
+
+
+//lightBackground
+
+.lightBackground .wrapper__arrow {
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
