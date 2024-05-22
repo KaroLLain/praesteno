@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900"
+      rel="stylesheet"
+      type="text/css"
+      media="none"
+      onload="if(media!='all')media='all'"
+    />
+
+    <link rel="icon" href="data:," />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Fundacja Praesterno | Wrocław</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="nav">
+        <ul class="nav__list">
+          <li class="nav__list__item--1">
+            <a href="#" class="nav__list__link">
+              <img class="nav__list__link--img" src="/img/logoPraesterno.png" alt="logo Fundacja Praesterno" />
+            </a>
+          </li>
+          <li class="nav__list__item"><a href="#aboutSection" class="nav__list__link">O nas</a></li>
+          <li class="nav__list__item"><a href="#offerSection" class="nav__list__link">Oferta</a></li>
+          <li class="nav__list__item"><a href="#cadreSection" class="nav__list__link">Kadra</a></li>
+          <li class="nav__list__item"><a href="#contactSection" class="nav__list__link">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <!-- <header class="header">
+        <div class="heading__primary">
+          <h1>
+            <span class="heading__primary--main"> <span class="first-word">Fundacja</span> Praesterno </span>
+          </h1>
+          <h1><span class="heading__primary--sub">spotkajmy się we Wrocławiu</span></h1>
+        </div>
+        <div class="btn"><a class="btn__btn btn__btn--white btn__btn--animated" href="#aboutSection">Poznaj nas</a></div>
+      </header> -->
+
+      <header class="header"></header>
+
+      <div class="about__pictures">
+        <img src="/img/boy.png" alt="" class="about__img--2" />
+      </div>
+      <div id="aboutSection" class="about__content">
+        <h3 class="heading-3 about__content--h3">Bezpłatna pomoc psychologiczna</h3>
+        <h2 class="heading-2 heading-2--dark">Od lat wspieramy we Wrocławiu</h2>
+        <p class="about__text">
+          Lorem, ipsum dolor sit amet conse ctetur ac onsect eturdi pisic ing elit. Tenetur distinctio necess itatibus pariatur volup tatibus. Quidem
+          consequ atur harum volupta ipsum dolor sit amet !
+        </p>
+        <div class="btn"><a class="btn__btn btn__btn--small btn__btn--animated about__btn" href="#offerSection">Oferta</a></div>
+      </div>
+
+      <section id="offerSection" class="offer">
+        <div class="offer__box">
+          <div class="offer__box__inner">
+            <div class="offer__box__front offer__box__front--1">
+              <span class="offer__box__text--1">Oferta dla młodzieży</span>
+            </div>
+            <div class="offer__box__back">
+              <div class="offer__box__back__text--2">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ratione amet debitis libero molestias! Ipsa possimus neque explicabo
+                officia repudiandae?
+              </div>
+              <button class="btn__btn offer__box__back__btn offer__box__back__btn-2 btn__btn--smallWhite" data-popup="popup1">sprawdź</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="offer__box">
+          <div class="offer__box__inner">
+            <div class="offer__box__front offer__box__front--2">
+              <span class="offer__box__text--1">
+                <p>Oferta dla rodziców</p>
+              </span>
+            </div>
+            <div class="offer__box__back">
+              <div class="offer__box__back__text--2">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ratione amet debitis libero molestias! Ipsa possimus neque explicabo
+                officia repudiandae?
+              </div>
+              <button class="btn__btn offer__box__back__btn offer__box__back__btn-2 btn__btn--smallWhite" data-popup="popup2">sprawdź</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="offer__box">
+          <div class="offer__box__inner">
+            <div class="offer__box__front offer__box__front--3">
+              <div class="offer__box__text--1">
+                <p>Oferta dla szkół</p>
+              </div>
+            </div>
+            <div class="offer__box__back">
+              <div class="offer__box__back__text--2">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ratione amet debitis libero molestias! Ipsa possimus neque explicabo
+                officia repudiandae?
+              </div>
+              <button class="btn__btn offer__box__back__btn offer__box__back__btn-2 btn__btn--smallWhite" data-popup="popup3">sprawdź</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn btn__cadre__transition"><a href="#cadreSection" class="btn__btn btn__btn--small">Kadra</a></div>
+      </section>
+
+      <section id="cadreSection" class="cadre">
+        <h2 class="heading-1 cadre__heading">Nasza kadra</h2>
+
+        <div class="carouselBox">
+          <div class="wrapper">
+            <i id="left" class="wrapper__arrow fa-solid fa-angle-left"></i>
+            <div class="wrapper__carousel">
+              <div class="wrapper__carousel__item" draggable="false">
+                <div class="profile first__profile">
+                  <div class="profile__image">
+                    <img src="/img/worker1-lazy.jpg" />
+                  </div>
+                  <h2 class="profile__username">Ania Radłowicz</h2>
+                  <small class="profile__user__handle">psycholog</small>
+                  <div class="profile__description">
+                    <p>Lorem ipsum dolor sit, amet elit. Natus vero sapiente sequi placeat quos dolor assumenda aspernatur</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wrapper__carousel__item draggable="false"">
+                <div class="profile">
+                  <div class="profile__image">
+                    <img src="/img/worker2-lazy.jpg" />
+                  </div>
+                  <h2 class="profile__username">Ania Radłowicz</h2>
+                  <small class="profile__user__handle">psycholog</small>
+                  <div class="profile__description">
+                    <p>Lorem ipsum dolor sit, amet elit. Natus vero sapiente sequi placeat quos dolor assumenda aspernatur</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wrapper__carousel__item draggable="false"">
+                <div class="profile">
+                  <div class="profile__image">
+                    <img src="/img/worker3-lazy.jpg" />
+                  </div>
+                  <h2 class="profile__username">Ania Radłowicz</h2>
+                  <small class="profile__user__handle">psycholog</small>
+                  <div class="profile__description">
+                    <p>Lorem ipsum dolor sit, amet elit. Natus vero sapiente sequi placeat quos dolor assumenda aspernatur</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wrapper__carousel__item draggable="false"">
+                <div class="profile">
+                  <div class="profile__image">
+                    <img src="/img/worker5-lazy.jpg" />
+                  </div>
+                  <h2 class="profile__username">Ania Radłowicz</h2>
+                  <small class="profile__user__handle">psycholog</small>
+                  <div class="profile__description">
+                    <p>Lorem ipsum dolor sit, amet elit. Natus vero sapiente sequi placeat quos dolor assumenda aspernatur</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wrapper__carousel__item draggable="false"">
+                <div class="profile">
+                  <div class="profile__image">
+                    <img src="/img/worker6-lazy.jpg" />
+                  </div>
+                  <h2 class="profile__username">Ania Radłowicz</h2>
+                  <small class="profile__user__handle">psycholog</small>
+                  <div class="profile__description">
+                    <p>Lorem ipsum dolor sit, amet elit. Natus vero sapiente sequi placeat quos dolor assumenda aspernatur</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <i id="right" class="wrapper__arrow fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </section>
+
+      <section id="contactSection" class="contact">
+        <div class="contact__form">
+          <div class="contact__form__header btn__btn__tab-container" id="adolescent-offer">
+            <button class="heading-1bis btn__btn__tab btn__btn__tab--1" data-tab="1">Kontakt</button>
+            <span class="line"></span>
+            <button class="heading-1bis btn__btn__tab btn__btn__tab--2" data-tab="2">Napisz</button>
+          </div>
+
+          <form action="#" class="textarea__content textarea__content--1 textarea__content--active">
+            <div class="form__adress">
+              <p>Adres:</p>
+              <p>Tadeusza Kościuszki 80</p>
+              <p>50-441 Wrocław</p>
+              <br />
+              <p>Telefon: 71 372 31 48</p>
+            </div>
+          </form>
+          <div class="message__content message__content--1 message__content--active" id="map"></div>
+
+          <form action="#" class="textarea__content textarea__content--2">
+            <div class="form__group">
+              <input type="text" class="form__input" placeholder="Imię i Nazwisko" id="name" required />
+              <label for="name" class="form__label">Imię i Nazwisko</label>
+            </div>
+            <div class="form__group">
+              <input type="email" class="form__input" placeholder="Email address" id="email" required />
+              <label for="email" class="form__label">Email address</label>
+            </div>
+            <div class="form__box">
+              <select name="" id="" class="form__input form__select">
+                <option class="select__option" value="zero">Czego szukasz?</option>
+                <option class="select__option" value="one">Wsparcie dla młodzieży</option>
+                <option class="select__option" value="one">Wsparcie dla rodziców</option>
+                <option class="select__option" value="one">Oferta dla szkół</option>
+              </select>
+            </div>
+          </form>
+          <div class="message__content message__content--2">
+            <textarea name="textarea__msg" id="output" rows="8" cols="50" name="msg" form="usrform"></textarea>
+            <div class="textarea__btn">
+              <a class="btn__btn btn__btn--smallGrey contactButton" href="#contactSection">Wyślij</a>
+              <p class="textarea__message hide">Wiadomość została wysłana!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="footer__copyright">Dolnośląski Ośrodek Fundacji <a href="#" class="footer__link">Praesterno</a> &copy;</p>
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">O Fundacji</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Polityka prywatności</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Kontakt</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+    <div class="popup popup__hidden close" id="popup1">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img\hero7.jpg" alt="kontakt indywidualny" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <a href="#section-offer" class="popup__close close">&times;</a>
+          <h2 class="heading-2 popup__heading">Grupy młodzieżowe i kontakt indywidualny</h2>
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sint fugiat a nam enim illum asperiores blanditiis officiis tempore
+            ipsum necessitatibus nihil, voluptatem et maxime labore animi tenetur natus aliquid molestias in hic accusamus esse vitae! Unde dolorum,
+            deserunt ipsa accusantium temporibus ratione minima animi expedita non hic pariatur. Facere?
+          </p>
+          <a href="#contactSection" class="btn__btn btn__btn--smallWhite popup__btn close">Zapisz się</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup popup__hidden close" id="popup2">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img\ft.jpg" alt="grupa młodzieżowa" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <a href="#section-offer" class="popup__close close">&times;</a>
+          <h2 class="heading-2 popup__heading">Spotkania rodzinne i grupy dla rodziców</h2>
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sint fugiat a nam enim illum asperiores blanditiis officiis tempore
+            ipsum necessitatibus nihil, voluptatem et maxime labore animi tenetur natus aliquid molestias in hic accusamus esse vitae! Unde dolorum,
+            deserunt ipsa accusantium temporibus ratione minima animi expedita non hic pariatur. Facere?
+          </p>
+          <a href="#contactSection" class="btn__btn btn__btn--smallWhite popup__btn close">Zapisz się</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup popup__hidden close" id="popup3">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img\scte2.jpg" alt="grupa młodzieżowa" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <a href="#section-offer" class="popup__close close">&times;</a>
+          <h2 class="heading-2 popup__heading">Warsztaty profilaktyczno-informacyjne</h2>
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sint fugiat a nam enim illum asperiores blanditiis officiis tempore
+            ipsum necessitatibus nihil, voluptatem et maxime labore animi tenetur natus aliquid molestias in hic accusamus esse vitae! Unde dolorum,
+            deserunt ipsa accusantium temporibus ratione minima animi expedita non hic pariatur. Facere?
+          </p>
+          <a href="#contactSection" class="btn__btn btn__btn--smallWhite popup__btn close">Zapisz się</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="settings__toolbar toolbar__closed" role="navigation">
+      <div class="settings__toolbar__toggle">
+        <a class="settings__toolbar__link settings__toolbar__toggle__link" href="#a" title="Ustawienia dostępności" role="link">
+          <span class="settings__sr__only sr__only"></span>
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-accessibility"></use>
+            <title>Ustawienia dostępności</title>
+          </svg>
+        </a>
+      </div>
+      <div class="settings__toolbar__overlay">
+        <div class="settings__toolbar__inner">
+          <p class="settings__toolbar__title">Ustawienia dostępności</p>
+          <ul class="settings__toolbar__items">
+            <li class="settings__toolbar__item settings__toolbar__item--1">
+              <a href="#a" class="settings__toolbar__link resize__plus" title="Zwiększ czcionkę" aria-label="Zwiększ czcionkę" role="link">
+                <span class="settings__toolbar--icon">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icon-eye-plus"></use>
+                    <title>Większa czcionka</title>
+                  </svg>
+                </span>
+                <span class="settings__toolbar--text">Większa czcionka</span>
+              </a>
+            </li>
+            <li class="settings__toolbar__item settings__toolbar__item--2">
+              <a href="#a" class="settings__toolbar__link resize__minus" title="Zmniejsz czcionkę" aria-label="Zmniejsz czcionkę" role="link">
+                <span class="settings__toolbar--icon">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icon-eye-minus"></use>
+                    <title>Mniejsza czcionka</title>
+                  </svg>
+                </span>
+                <span class="settings__toolbar--text">Mniejsza czcionka</span>
+              </a>
+            </li>
+            <li class="settings__toolbar__item">
+              <a href="#a" class="settings__toolbar__link btn__greyscale" title="Skala szarości" aria-label="Skala szarości" role="link">
+                <span class="settings__toolbar--icon">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icon-invert_colors_off"></use>
+                    <title>Skala szarości</title>
+                  </svg>
+                </span>
+                <span class="settings__toolbar--text">Skala szarości</span>
+              </a>
+            </li>
+            <li class="settings__toolbar__item">
+              <a href="#a" class="settings__toolbar__link btn__highContrast" title="Wysoki kontrast" aria-label="Wysoki kontrast" role="link">
+                <span class="settings__toolbar--icon">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icon-contrast"></use>
+                    <title>Wysoki kontrast</title>
+                  </svg>
+                </span>
+                <span class="settings__toolbar--text">Wysoki kontrast</span>
+              </a>
+            </li>
+            <li class="settings__toolbar__item">
+              <a href="#a" class="settings__toolbar__link btn__switchedColors" title="Odwrócone kolory" aria-label="Odwrócone kolory" role="link">
+                <span class="settings__toolbar--icon">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icon-paint-format"></use>
+                    <title>Odwrócone kolory</title>
+                  </svg>
+                </span>
+                <span class="settings__toolbar--text">Odwrócone kolory</span>
+              </a>
+            </li>
+            <li class="settings__toolbar__item">
+              <a href="#a" class="settings__toolbar__link btn__lightBackground" title="Jasne tło" aria-label="Jasne tło" role="link">
+                <span class="settings__toolbar--icon">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icon-brightness-contrast"></use>
+                    <title>Jasne tło</title>
+                  </svg>
+                </span>
+                <span class="settings__toolbar--text">Jasne tło</span>
+              </a>
+            </li>
+            <li class="settings__toolbar__item">
+              <a
+                href="#a"
+                class="settings__toolbar__link btn__linksUnderline"
+                title="Podkreślenia linków"
+                aria-label="Podkreślenia linków"
+                role="link"
+              >
+                <span class="settings__toolbar--icon">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icon-link"></use>
+                    <title>Podkreślenia linków</title>
+                  </svg>
+                </span>
+                <span class="settings__toolbar--text">Podkreślenia linków</span>
+              </a>
+            </li>
+            <li class="settings__toolbar__item">
+              <a href="#a" class="settings__toolbar__link btn__basicFont" title="Zwykła czcionka" aria-label="Zwykła czcionka" role="link">
+                <span class="settings__toolbar--icon">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icon-sort_by_alpha"></use>
+                    <title>Zwykła czcionka</title>
+                  </svg>
+                </span>
+                <span class="settings__toolbar--text">Zwykła czcionka</span>
+              </a>
+            </li>
+            <li class="settings__toolbar__item">
+              <a href="#a" class="settings__toolbar__link btn__reset" aria-label="reset" role="link">
+                <span class="settings__toolbar--icon">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icon-reset_tv"></use>
+                    <title>Reset</title>
+                  </svg>
+                </span>
+                <span class="settings__toolbar--text">Reset</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
